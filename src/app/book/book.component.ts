@@ -11,3 +11,10 @@ import { CommonModule } from '@angular/common';
 export class BookComponent {
 
 }
+
+export interface Books {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+}
