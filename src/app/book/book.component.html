@@ -1,39 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Professional Book Review</title>
+    <style>
+      /* Add your custom styles here */
+      .rating {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .rating input {
+        display: none;
+      }
+      .rating label {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        background-image: url("../../assets/pics/omarpics/star.png");
+        /* you can change the background star from here */
+        background-size: cover;
+      }
+      .rating input:checked + label {
+        background-image: url("../../assets/pics/omarpics/filled-star.png");
+        /* you can change image of the filled star from here */
+      }
+      .book-image {
+        max-width: 100%;
+        height: auto;
+      }
+      .book-info {
+        margin-top: 20px;
+      }
+      .user-reviews {
+        margin-top: 20px;
+      }
+      .user-review {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      .user-profile {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="../../assets/pics/omarpics/book_cover.jpg"
+            alt="Book Cover"
+            class="book-image"
+          />
+          <!-- you can change book cover bild from here -->
+        </div>
+        <div class="col-md-8">
+          <div class="book-info">
+            <h2>Designing Distributed Systems</h2>
+            <p>Author: Brendan Burns</p>
+            <p>Genre: computer science</p>
+            <p>Published: February 20, 2018</p>
+            <p>Pages: 162</p>
+          </div>
+          <h3>Rate this Book</h3>
+          <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label
+              for="star5"
+            ></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label
+              for="star4"
+            ></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label
+              for="star3"
+            ></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label
+              for="star2"
+            ></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label
+              for="star1"
+            ></label>
+          </div>
+        </div>
+      </div>
+      <div class="comment-section">
+        <h3>Leave a Comment</h3>
+        <form>
+          <div class="form-group">
+            <label for="comment">Your Comment:</label>
+            <textarea class="form-control" id="comment" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Comment</button>
+        </form>
+      </div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4 mt-4 ms-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=502&fit=crop&dpr=1" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <!-- User Reviews Section -->
+      <div class="user-reviews mt-5">
+        <h3>User Reviews</h3>
+        <!-- Sample User Review -->
+        <div class="user-review">
+          <div class="d-flex align-items-center">
+            <img
+              src="../../assets/pics/omarpics/user_profile.jpg"
+              alt="User Profile"
+              class="user-profile"
+            />
+            <!-- you can edit user bild from here -->
+            <span class="ml-2">random guy on the internet</span>
+          </div>
+          <div class="rating mt-2">
+            <!-- Display the user's rating stars here -->
+          </div>
+          <p class="mt-2">this book is extremly great I realy enjoyed it</p>
+          <p class="text-muted">Posted on January 15, 2023</p>
+        </div>
+        <!-- Add more user reviews dynamically -->
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=502&fit=crop&dpr=1" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a short card.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=502&fit=crop&dpr=1" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=502&fit=crop&dpr=1" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
+
+    <!-- ... (remaining code) ... -->
+  </body>
+</html>
