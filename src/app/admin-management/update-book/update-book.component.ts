@@ -31,7 +31,8 @@ export class UpdateBookComponent  {
     image:new FormControl("")
   });
   
-  constructor(private bookService:BookServices,private activatedRoute:ActivatedRoute) { }
+  constructor(private bookService:BookServices,private activatedRoute:ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
     this.bookId = this.activatedRoute.snapshot.params["bookId"];
