@@ -1,10 +1,10 @@
-<div  class="mt-5 container"  style="height:408px;width: 50%;">
+<div  class="mt-5 container" >
   <form class="needs-validation" novalidate="">
 
     <div class=" row ml-0 mr-0">
 
       <div class="col-6">
-        <label for="firstName" class="form-label text-warning">First name</label>
+        <label for="firstName" class="form-label ">First Name</label>
         <input type="text" class="form-control" id="firstName" placeholder="FirstName" value="" required="">
         <div class="invalid-feedback ">
           Valid first name is required.
@@ -12,7 +12,7 @@
       </div>
 
       <div class="col-6">
-        <label for="lastName" class="form-label text-warning">Last name</label>
+        <label for="lastName" class="form-label ">Last Name</label>
         <input type="text" class="form-control" id="lastName" placeholder="lastName" value="" required="">
         <div class="invalid-feedback">
           Valid last name is required.
@@ -23,9 +23,13 @@
     </div>
     <div class="row ml-0 mr-0">
       <div class="col">
-        <label for="username" class="form-label text-warning">Username</label>
+        <label for="username" class="form-label ">Username</label>
         <div class="input-group has-validation">
-          <span class="input-group-text text-warning"></span>
+          <span class="input-group-text ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-at" viewBox="0 0 16 16">
+                <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914"/>
+            </svg>
+          </span>
           <input type="text" class="form-control " id="username" placeholder="UserName" required="">
           <div class="invalid-feedback">
             Your username is required.
@@ -34,7 +38,7 @@
       </div>
     </div>
     <div class="col-12">
-      <label for="email" class="form-label text-warning">Email <span class="text-body-secondary"></span></label>
+      <label for="email" class="form-label ">Email <span class="text-body-secondary"></span></label>
       <input type="email" class="form-control" id="email" placeholder="you@example.com">
       <div class="invalid-feedback">
         Please enter a valid email address for shipping updates.
@@ -42,14 +46,14 @@
     </div>
     <div class="row mt-5 ml-0">
       <div class="col">
-        <label  class="form-label text-warning">gender</label>
+        <label  class="form-label ">gender</label>
         <select class="form-select" aria-label="Default select example">
-          <option value="1">male</option>
-          <option value="2">female</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
         </select>
       </div>
     </div>
-    <button class="btn btn-md btn-warning mt-5 ml-3">sign in</button>
+    <button class="btn btn-md btn-success mt-5 ml-3">Sign in</button>
 
   </form>
 </div>
