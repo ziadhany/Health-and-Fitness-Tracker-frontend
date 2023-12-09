@@ -10,16 +10,16 @@ import { RouterLink } from '@angular/router';
 })
 export class SingleBookComponent {
   book: Book | undefined;
-  
+
   ngOnInit(): void {
-    
+
     this.book = {
-      title:"Harry Potter", 
-      author :"J.K.Rowling", 
+      title:"Harry Potter",
+      author :"J.K.Rowling",
       category:"fantasy",
       description:"The novels follow Harry Potter, an 11-year-old boy who discovers he is the son of famous wizards and will attend Hogwarts School of Witchcraft and Wizardry. Harry learns of an entire society of wizards and witches. He befriends several Hogwarts students and ",
       price:100,
-      image: "src\assets\imges\Harry.jpg",
+      image: "src/assets/images/Harry.jpg",
       numOfPages:100,
       quantity:2
     };

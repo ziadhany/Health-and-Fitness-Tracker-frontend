@@ -1,0 +1,61 @@
+<div  class="mt-5 container"  style="height:408px;width: 50%;">
+  <form class="needs-validation" novalidate="">
+
+    <div class=" row ml-0 mr-0">
+
+      <div class="col-6">
+        <label for="firstName" class="form-label text-warning">First name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="FirstName" value="" required="">
+        <div class="invalid-feedback ">
+          Valid first name is required.
+        </div>
+      </div>
+
+      <div class="col-6">
+        <label for="lastName" class="form-label text-warning">Last name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="lastName" value="" required="">
+        <div class="invalid-feedback">
+          Valid last name is required.
+        </div>
+      </div>
+
+
+    </div>
+    <div class="row ml-0 mr-0">
+      <div class="col">
+        <label for="username" class="form-label text-warning">Username</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text text-warning"></span>
+          <input type="text" class="form-control " id="username" placeholder="UserName" required="">
+          <div class="invalid-feedback">
+            Your username is required.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <label for="email" class="form-label text-warning">Email <span class="text-body-secondary"></span></label>
+      <input type="email" class="form-control" id="email" placeholder="you@example.com">
+      <div class="invalid-feedback">
+        Please enter a valid email address for shipping updates.
+      </div>
+    </div>
+    <div class="row mt-5 ml-0">
+      <div class="col">
+        <label  class="form-label text-warning">gender</label>
+        <select class="form-select" aria-label="Default select example">
+          <option value="1">male</option>
+          <option value="2">female</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-md btn-warning mt-5 ml-3">sign in</button>
+
+  </form>
+</div>
+
+
+
+
+
+

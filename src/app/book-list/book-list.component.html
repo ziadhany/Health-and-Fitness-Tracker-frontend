@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row g-3">
+    <div class="col-md-3">
+      <div class="boxModel">
+        <h5 id="sidebar-title">Filters</h5>
+
+        <h6>Category</h6>
+        <form>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheck1">
+            <label class="form-check-label" for="flexCheck1">
+              History
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheck2">
+            <label class="form-check-label" for="flexCheck2">
+              Fiction
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheck3">
+            <label class="form-check-label" for="flexCheck3">
+              Psychology
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheck4">
+            <label class="form-check-label" for="flexCheck4">
+              Science
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheck5">
+            <label class="form-check-label" for="flexCheck5">
+              Novels
+            </label>
+          </div>
+        </form>
+
+        <h6>Rating</h6>
+        <form>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">1</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">2</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <label class="form-check-label" for="inlineRadio3">3</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            <label class="form-check-label" for="inlineRadio1">4</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            <label class="form-check-label" for="inlineRadio1">5</label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="row justify-content-between">
+        <form class="d-flex col-5">
+          <div class="input-group">
+            <input type="text" class="form-control" [(ngModel)]="searchtext" placeholder="Search Books" />
+            <button type="button" class="btn btn-secondary" (click)="searchtext.title"><i class="bi-search"></i></button>
+          </div>
+        </form>
+
+        <div class="filter-shop d-flex justify-content-between col-2">
+          <div class="sort-by">
+            <select id="input-sort" class="form-control" data-filter-sort="" data-filter-order="">
+              <option value="">Default sorting</option>
+              <option value="">Name (A - Z)</option>
+              <option value="">Name (Z - A)</option>
+              <option value="">Rating (Highest)</option>
+              <option value="">Rating (Lowest)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="container mt-2">
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col-lg-3 col-md-2" *ngFor="let book of bookList">
+              <div class="card text-center h-100" style="width: 15rem;">
+                <img [src]="book.imageUrl" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{book.title}}</h5>
+                  <p class="card-text">{{book.description}}</p>
+                  <a href="#" class="btn btn-primary">Download</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.container {
+  margin-top: 15px;
+}
+
+.boxModel {
+  background-color: #fff;
+  height:fit-content;
+  border-right: 1px solid #eaeaea;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.boxModel h5 {
+  border-bottom: 1px #151515 solid;
+  padding-bottom: 15px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.boxModel h6 {
+  padding-bottom: 15px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.boxModel form {
+  margin-bottom: 20px
+}
+
+.d-flex {
+  margin-top: 5px;
+}
+
+#sort {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.product-content {
+  margin-top: 30px;
+}
+
+.d-flex {
+  margin: auto;
+  margin-top: 35px;
+}

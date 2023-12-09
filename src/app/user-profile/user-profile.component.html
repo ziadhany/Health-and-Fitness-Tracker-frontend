@@ -1,0 +1,162 @@
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .profile-info {
+      margin-left: 20px;
+    }
+
+    .profile-info h2 {
+      margin-bottom: 5px;
+    }
+
+    .profile-info span {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .year-in-books {
+      margin-bottom: 20px;
+    }
+
+    .year-in-books h3 {
+      margin-bottom: 10px;
+    }
+
+    .books-container {
+      display: grid;
+      grid-template-columns: repeat(5, 2fr);
+      grid-gap: 20px;
+    }
+
+    .book {
+      background-color: #f5f5f5;
+      padding: 10px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .book img {
+      width: 60%;
+      height: auto;
+    }
+
+    .book h3 {
+      margin-bottom: 5px;
+    }
+
+    .book p {
+      margin-bottom: 10px;
+    }
+
+    .book span {
+      font-size: 14px;
+      color: #666;
+    }
+</style>
+<div class="container">
+  <div class="profile">
+    <img ngSrc="assets/images/profile_photo.jpg" alt="Profile Image" height="640" width="640">
+    <div class="profile-info">
+      <h2>Mohammed Khaled</h2>
+      <dl>
+        <dt>Details</dt>
+        <dd>Age 24, Male, Fayoum</dd>
+        <dt>Birthday</dt>
+        <dd>February 28, 1999</dd>
+        <dt>Activity</dt>
+        <dd>Joined in March 2018, last active this month</dd>
+      </dl>
+    </div>
+  </div>
+
+
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Recently Rated</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="true">My Categories</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Fiction</a></li>
+        <li><a class="dropdown-item" href="#">Crime</a></li>
+        <li><a class="dropdown-item" href="#">Phelosophy</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">My Qoutes</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+
+  <div class="year-in-books">
+    <h3>Your Year in Books</h3>
+    <div class="books-container">
+      <!-- books added here (This static placeholder books )-->
+      <div class="book">
+        <img ngSrc="assets/images/harryPotterCover.jpg" alt="Book Image" height="680" width="510">
+        <h4>Harry Potter and the Sorcerer’s Stone</h4>
+        <p>J.K Rowling</p>
+        <span>4.5</span>
+      </div>
+
+      <div class="book">
+        <img ngSrc="assets/images/IgniteMeCover.jpg" alt="Book Image" width="10" height="15">
+        <h4>Ignite Me</h4>
+        <p>Tahereh Mafi</p>
+        <span>4.47</span>
+      </div>
+      <div class="book">
+        <img ngSrc="assets/images/AThousandPiecesofYou.jpg" alt="Book Image" height="10" width="6">
+        <h4>A Thousand Pieces of You</h4>
+        <p>Claudia Gray</p>
+        <span>3.90</span>
+      </div>
+      <div class="book">
+        <img ngSrc="assets/images/The Poly.jpg" alt="Book Image" height="10" width="6">
+        <h4>The Polymorph</h4>
+        <p>Max Nowaz</p>
+        <span>3.70</span>
+      </div>
+      <div class="book">
+        <img ngSrc="assets/images/RELIC.jpg" alt="Book Image" height="10" width="6">
+        <h4>RELIC: A SciFi Adventure</h4>
+        <p>T.S.FALK</p>
+        <span>4.70</span>
+      </div>
+      <div class="book">
+        <img ngSrc="assets/images/AURORA.jpg" alt="Book Image" height="10" width="6">
+        <h4>The Aurora Project: We were not the first</h4>
+        <p>Paul</p>
+        <span>4.70</span>
+      </div>
+
+    </div>
+  </div>
+</div>
