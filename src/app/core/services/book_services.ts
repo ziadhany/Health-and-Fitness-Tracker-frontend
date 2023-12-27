@@ -1,39 +1,40 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Book } from '../models/Book';
+import { Book } from '../models/book';
 
 @Injectable({
   providedIn: 'root',
 })
 export class BookServices {
-  // constructor(private _http: HttpClient) {}
-  // baseURL = 'http://localhost:3000/api/books';
+  constructor(private _http: HttpClient) {}
+  baseURL = '';
   book: Book | null = null;
-  // favBooksIds: any[] = [];
-  // favBooks: any[] = [];
-  books:Book[] = [];
+  favBooksIds: any[] = [];
+  favBooks: any[] = [];
 
-  addBook(data: any){
-    this.books.push(data);
-    console.log('add data')
-    this.books.forEach(ele => console.log(ele)) 
+  addBook(data: any): Observable<any> {
+    return this._http.post(`${this.baseURL}/add`, data);
   }
-  getAllBooks(): Book[]{
-    return this.books
-
+  getAllBooks(): Observable<any> {
+    return this._http.get(`${this.baseURL}/`);
   }
-  
-  getSingleBook(id: string): any{
-    return this.books.find(ele=>ele._id == id);
+  getSingleBook(id: string): Observable<any> {
+    return this._http.get(`${this.baseURL}/single/${id}`);
   }
-  updateBook(id: string, data: any){
-    this.books.splice(this.books.findIndex(ele=>ele._id == id),1,data)
-    console.log('updated')
+  updateBook(id: string, data: any): Observable<any> {
+    return this._http.put(`${this.baseURL}/update/${id}`, data);
   }
-  deleteBook(id: string) {
-    this.books.splice(this.books.findIndex(ele=>ele._id == id),1)
-    console.log('delete')
+  deleteBook(id: string): Observable<any> {
+    return this._http.delete(`${this.baseURL}/delete/${id}`);
   }
-
+  addToFavourite(data:any): Observable<any>{
+    return this._http.post(`${this.baseURL}/addtofavourite`,data);
+  }
+  getFavBooks(): Observable<any>{
+    return this._http.get(`${this.baseURL}/favbooks`);
+  }
+  deleteBookFromFav(id:string): Observable<any>{
+    return this._http.delete(`${this.baseURL}/deletefromfav/${id}`);
+  }
 }
