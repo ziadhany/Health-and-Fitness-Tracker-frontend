@@ -8,25 +8,25 @@ import { Book } from '../models/book';
 })
 export class BookServices {
   constructor(private _http: HttpClient) {}
-  baseURL = '';
+  baseURL = 'http://localhost:8080/books';
   book: Book | null = null;
   favBooksIds: any[] = [];
   favBooks: any[] = [];
 
   addBook(data: any): Observable<any> {
-    return this._http.post(`${this.baseURL}/add`, data);
+    return this._http.post(`${this.baseURL}/`, data);
   }
   getAllBooks(): Observable<any> {
     return this._http.get(`${this.baseURL}/`);
   }
   getSingleBook(id: string): Observable<any> {
-    return this._http.get(`${this.baseURL}/single/${id}`);
+    return this._http.get(`${this.baseURL}/${id}`);
   }
   updateBook(id: string, data: any): Observable<any> {
-    return this._http.put(`${this.baseURL}/update/${id}`, data);
+    return this._http.put(`${this.baseURL}/${id}`, data);
   }
   deleteBook(id: string): Observable<any> {
-    return this._http.delete(`${this.baseURL}/delete/${id}`);
+    return this._http.delete(`${this.baseURL}/${id}`);
   }
   addToFavourite(data:any): Observable<any>{
     return this._http.post(`${this.baseURL}/addtofavourite`,data);
